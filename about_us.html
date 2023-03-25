@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cats</title>
+        <link rel="icon" href="catfavicon3.png">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <a href="home.html"><li>Home</li></a>
+                <a href="gallery.html"><li>Gallery</li></a>
+                <a href="cat_breeds.html"><li>Cat Breeds</li></a>
+                <a href="about_us.html"><li>About Us</li></a>
+            </ul>
+        </div>
+        <div class="wrapper">
+        <div class="banner">
+        <div class="banner-text centered">About Us
+        </div>
+        </div>
+        </div>
+
+        <div class="index-text centered" style="color: black; font-size: 1.5rem; text-align: center; padding-right: 850px; width: 1450px; height: 50px;">
+        About Us: </div>
+
+        <p class="about_text">My name is David and I have a cat called Silky who is six years old. We have made this website to inform more people on cats* and provide quality cat images to the wider public. <br><br> *superior than dogs. </p>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <img src="IMG_1710[52].JPG" class="about_image" style="margin: -260px 223px; width: 324px;">
+        <img src="IMG_0693[56].JPG" class="about_image" style="margin: -463px 53px; height: 225px; border-right: 3px black solid">
+        <img src="IMG_8022[77].jpg" class="about_image" style="margin: -242px 53px; height: 225px; border-right: 3px black solid">
+
+        <div class="index-text centered" style="float: right; padding-right: 265px; margin: -565px 0px;">Get in touch with me through this form: 
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+     
+        <form class="form" type="submit">
+            <p></p>
+            <label for="fname">First name:</label><br>
+            <input type="text" value="" id="fname" name="fname" placeholder="e.g. John"><br></br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" value="" id="lname" name="lname" placeholder="e.g. Smith"><br></br>
+            <label for="email">Email:</label><br>
+            <input type="text" value="" id="email" name="email" style="width: 500px;" placeholder="e.g.  john.smith@email.com"><br></br>
+            <label for="thoughts">Thoughts:</label><br>
+            <input type="text" value="" id="thoughts" name="thoughts" style="width: 500px;" placeholder="Feedback"><br></br>
+        </form>
+        
+        <div class="button-wrapper" style="float: right;">
+        <button class="confetti-button" id="confetti_button" onclick="document.getElementById('fname').value = ''; document.getElementById('thoughts').value = ''; document.getElementById('email').value = ''; document.getElementById('lname').value = ''">Submit🎉</button>
+        </div>
+       
+
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        let canvas = document.createElement("canvas");
+        canvas.width = 600;
+        canvas.height = 600;
+        let container = document.getElementsByClassName("button-wrapper")[0];
+        container.appendChild(canvas);
+
+        let confetti_button = confetti.create(canvas);
+        confetti_button({
+          particleCount: 200,
+          spread: 200,
+          startVelocity: 15,
+          scalar: 0.9,
+          ticks: 90
+        }).then(() => container.removeChild(canvas));
+      });
+    </script>
+        <div class="footer">
+        <p>Copyright 2023</p>
+        </div>        
+    </body>
+</html>
